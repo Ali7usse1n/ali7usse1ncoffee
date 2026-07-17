@@ -3,73 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali7usse1n Coffee | علي حسين كافي</title>
+    <title>Ali7usse1n Coffee</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <h1>☕ Ali7usse1n Coffee</h1>
-                <p class="tagline">قهوة بجودة عالية وذوق رفيع</p>
+
+<div class="page">
+
+    <!-- Logo -->
+    <section class="logo-section">
+
+        <img src="logo.png" class="logo" alt="Logo">
+
+        <h1>Ali7usse1n Coffee</h1>
+
+    </section>
+
+    <!-- Offer -->
+
+    <section class="offer-section">
+
+        <div class="offer-card">
+
+            <img src="offer.jpg" alt="عرض اليوم">
+
+            <div class="offer-overlay">
+
+                <h2>عرض اليوم</h2>
+
+                <p>
+                    لاتيه كراميل<br>
+                    مع كيكة الشوكولاتة
+                </p>
+
+                <span class="price">
+                    15 ريال
+                </span>
+
             </div>
+
         </div>
-    </header>
 
-    <!-- Main Content -->
-    <main class="main">
-        <div class="container">
-            <!-- Logo Section -->
-            <section class="logo-section">
-                <div class="logo-box">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='95' fill='%238B4513' stroke='%23D4AF37' stroke-width='3'/%3E%3Ctext x='100' y='120' font-size='60' font-family='Arial' fill='%23D4AF37' text-anchor='middle' font-weight='bold'%3E☕%3C/text%3E%3C/svg%3E" alt="Logo" class="logo-img">
-                </div>
-            </section>
+    </section>
 
-            <!-- Featured Image Section -->
-            <section class="featured-section">
-                <h2>🌟 عرض الشهر</h2>
-                <div class="featured-image">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23f5e6d3'/%3E%3Ccircle cx='300' cy='200' r='150' fill='%238B4513'/%3E%3Ctext x='300' y='220' font-size='80' font-anchor='middle' text-anchor='middle'%3E☕%3C/text%3E%3Ctext x='300' y='280' font-size='32' font-family='Arial' fill='white' text-anchor='middle' font-weight='bold'%3Eبرسبيتسيو إسبريسو%3C/text%3E%3Ctext x='300' y='320' font-size='20' font-family='Arial' fill='%23333' text-anchor='middle'%3Eاستمتع بأفضل قهوة هذا الشهر%3C/text%3E%3C/svg%3E" alt="Featured" class="featured-img">
-                </div>
-            </section>
+    <!-- Menu -->
 
-            <!-- Menu Button Section -->
-            <section class="menu-section">
-                <h2>📋 اكتشف منيونا</h2>
-                <button class="menu-btn" onclick="openMenu()">
-                    <span>عرض المنيو الكامل</span>
-                    <span class="arrow">→</span>
-                </button>
-            </section>
+    <section class="menu-section">
 
-            <!-- Info Section -->
-            <section class="info-section">
-                <div class="info-box">
-                    <h3>🏪 عن المقهى</h3>
-                    <p>نقدم لكم أفضل القهوة المحمصة طازجة، مع أجواء دافئة وخدمة احترافية لا تنسى.</p>
-                </div>
-                <div class="info-box">
-                    <h3>⏰ أوقات العمل</h3>
-                    <p>يومياً من الساعة 7 صباحاً إلى 11 مساءً</p>
-                </div>
-                <div class="info-box">
-                    <h3>📱 تواصل معنا</h3>
-                    <p>للطلبات والاستفسارات: +966XXXXXXXXX</p>
-                </div>
-            </section>
-        </div>
-    </main>
+        <a href="menu.pdf" target="_blank" class="menu-button">
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Ali7usse1n Coffee. جميع الحقوق محفوظة.</p>
-    </footer>
+            📄 منيو الكافي
 
-    <!-- Hidden PDF link -->
-    <a id="pdfLink" href="menu.pdf" style="display:none;"></a>
+        </a>
 
-    <script src="script.js"></script>
+    </section>
+
+</div>
+
 </body>
 </html>
