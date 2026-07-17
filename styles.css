@@ -1,0 +1,338 @@
+/* ================================
+   Ali7usse1n Coffee - Styles
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Colors */
+:root {
+    --primary-brown: #8B4513;
+    --secondary-brown: #A0522D;
+    --accent-gold: #D4AF37;
+    --light-bg: #f5e6d3;
+    --dark-text: #2c2c2c;
+    --white: #ffffff;
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--light-bg) 0%, #e8d4b8 100%);
+    color: var(--dark-text);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* ================================
+   HEADER
+   ================================ */
+
+.header {
+    background: linear-gradient(135deg, var(--primary-brown) 0%, var(--secondary-brown) 100%);
+    color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border-bottom: 4px solid var(--accent-gold);
+}
+
+.logo h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+    font-size: 1.1em;
+    color: var(--accent-gold);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* ================================
+   MAIN CONTENT
+   ================================ */
+
+main {
+    flex: 1;
+    padding: 60px 0;
+}
+
+/* Logo Section */
+.logo-section {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeInDown 0.8s ease;
+}
+
+.logo-section h2 {
+    font-size: 2em;
+    color: var(--primary-brown);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.logo-box {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    display: inline-block;
+    transition: var(--transition);
+    border: 3px solid var(--accent-gold);
+}
+
+.logo-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+}
+
+.logo-img {
+    width: 180px;
+    height: 180px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Featured Section */
+.featured-section {
+    margin-bottom: 60px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.featured-section h2 {
+    font-size: 2em;
+    color: var(--primary-brown);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.featured-image {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 3px solid var(--accent-gold);
+    max-height: 400px;
+    transition: var(--transition);
+}
+
+.featured-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+}
+
+.featured-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Menu Section */
+.menu-section {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.menu-section h2 {
+    font-size: 2em;
+    color: var(--primary-brown);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.menu-btn {
+    background: linear-gradient(135deg, var(--primary-brown) 0%, var(--secondary-brown) 100%);
+    color: var(--white);
+    border: none;
+    padding: 18px 50px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-btn:hover {
+    background: linear-gradient(135deg, var(--secondary-brown) 0%, #6b3410 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4);
+}
+
+.menu-btn:active {
+    transform: translateY(-1px);
+}
+
+.menu-btn .arrow {
+    font-size: 1.4em;
+    transition: transform 0.3s ease;
+}
+
+.menu-btn:hover .arrow {
+    transform: translateX(-5px);
+}
+
+/* Info Section */
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+    animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.info-box {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border-right: 5px solid var(--accent-gold);
+    transition: var(--transition);
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+}
+
+.info-box h3 {
+    color: var(--primary-brown);
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.info-box p {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.8;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+
+.footer {
+    background: var(--primary-brown);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: auto;
+    border-top: 4px solid var(--accent-gold);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* ================================
+   ANIMATIONS
+   ================================ */
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+   ================================ */
+
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 2em;
+    }
+
+    .tagline {
+        font-size: 0.9em;
+    }
+
+    .logo-section h2,
+    .featured-section h2,
+    .menu-section h2 {
+        font-size: 1.5em;
+    }
+
+    .logo-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .menu-btn {
+        padding: 15px 40px;
+        font-size: 1em;
+    }
+
+    .info-section {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 30px 0;
+    }
+
+    .logo h1 {
+        font-size: 1.5em;
+    }
+
+    .menu-btn {
+        padding: 12px 30px;
+        font-size: 0.9em;
+    }
+
+    .info-box {
+        padding: 20px;
+    }
+
+    .info-box h3 {
+        font-size: 1.1em;
+    }
+
+    .info-box p {
+        font-size: 0.9em;
+    }
+}
