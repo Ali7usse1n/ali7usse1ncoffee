@@ -2,225 +2,237 @@
    Ali7usse1n Coffee - Simple & Elegant Design
    ===================== */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
 }
 
 :root {
-    --primary: #8B4513;
-    --secondary: #A0522D;
-    --accent: #D4AF37;
-    --light: #f5e6d3;
-    --dark: #2c2c2c;
-    --white: #ffffff;
+  /* Coffee Shop Luxury Palette */
+  --primary: oklch(0.55 0.15 45); /* Warm Gold */
+  --primary-foreground: oklch(0.95 0.01 0); /* Cream */
+  --sidebar-primary: oklch(0.55 0.15 45);
+  --sidebar-primary-foreground: oklch(0.95 0.01 0);
+  --chart-1: oklch(0.55 0.15 45);
+  --chart-2: oklch(0.45 0.12 40);
+  --chart-3: oklch(0.35 0.1 35);
+  --chart-4: oklch(0.25 0.08 30);
+  --chart-5: oklch(0.15 0.05 25);
+  --radius: 0.5rem;
+  --background: oklch(0.1 0.01 30); /* Deep Charcoal */
+  --foreground: oklch(0.95 0.01 0); /* Cream */
+  --card: oklch(0.15 0.02 30); /* Slightly lighter charcoal */
+  --card-foreground: oklch(0.95 0.01 0);
+  --popover: oklch(0.15 0.02 30);
+  --popover-foreground: oklch(0.95 0.01 0);
+  --secondary: oklch(0.55 0.15 45); /* Gold */
+  --secondary-foreground: oklch(0.1 0.01 30);
+  --muted: oklch(0.35 0.05 30); /* Muted gray */
+  --muted-foreground: oklch(0.75 0.02 0);
+  --accent: oklch(0.55 0.15 45); /* Gold accent */
+  --accent-foreground: oklch(0.1 0.01 30);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.25 0.03 30); /* Dark border */
+  --input: oklch(0.2 0.02 30);
+  --ring: oklch(0.55 0.15 45);
+  --sidebar: oklch(0.15 0.02 30);
+  --sidebar-foreground: oklch(0.95 0.01 0);
+  --sidebar-accent: oklch(0.55 0.15 45);
+  --sidebar-accent-foreground: oklch(0.1 0.01 30);
+  --sidebar-border: oklch(0.25 0.03 30);
+  --sidebar-ring: oklch(0.55 0.15 45);
 }
 
-html {
-    scroll-behavior: smooth;
+.dark {
+  /* Dark theme is default for this luxury coffee shop */
+  --primary: oklch(0.55 0.15 45);
+  --primary-foreground: oklch(0.95 0.01 0);
+  --sidebar-primary: oklch(0.55 0.15 45);
+  --sidebar-primary-foreground: oklch(0.95 0.01 0);
+  --background: oklch(0.1 0.01 30);
+  --foreground: oklch(0.95 0.01 0);
+  --card: oklch(0.15 0.02 30);
+  --card-foreground: oklch(0.95 0.01 0);
+  --popover: oklch(0.15 0.02 30);
+  --popover-foreground: oklch(0.95 0.01 0);
+  --secondary: oklch(0.55 0.15 45);
+  --secondary-foreground: oklch(0.1 0.01 30);
+  --muted: oklch(0.35 0.05 30);
+  --muted-foreground: oklch(0.75 0.02 0);
+  --accent: oklch(0.55 0.15 45);
+  --accent-foreground: oklch(0.1 0.01 30);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.25 0.03 30);
+  --input: oklch(0.2 0.02 30);
+  --ring: oklch(0.55 0.15 45);
+  --chart-1: oklch(0.55 0.15 45);
+  --chart-2: oklch(0.45 0.12 40);
+  --chart-3: oklch(0.35 0.1 35);
+  --chart-4: oklch(0.25 0.08 30);
+  --chart-5: oklch(0.15 0.05 25);
+  --sidebar: oklch(0.15 0.02 30);
+  --sidebar-foreground: oklch(0.95 0.01 0);
+  --sidebar-accent: oklch(0.55 0.15 45);
+  --sidebar-accent-foreground: oklch(0.95 0.01 0);
+  --sidebar-border: oklch(0.25 0.03 30);
+  --sidebar-ring: oklch(0.55 0.15 45);
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, var(--light) 0%, #ede0cc 100%);
-    color: var(--dark);
-    line-height: 1.6;
-    min-height: 100vh;
-}
-
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* =====================
-   HEADER
-   ===================== */
-
-header {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-    color: var(--white);
-    padding: 50px 0;
-    text-align: center;
-    border-bottom: 4px solid var(--accent);
-    margin-bottom: 40px;
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Lora', serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
-    letter-spacing: 1px;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
 }
 
-.subtitle {
-    font-size: 1.1em;
-    color: var(--accent);
-    font-weight: 300;
-}
+@layer components {
+  /**
+   * Custom container utility that centers content and adds responsive padding.
+   *
+   * This overrides Tailwind's default container behavior to:
+   * - Auto-center content (mx-auto)
+   * - Add responsive horizontal padding
+   * - Set max-width for large screens
+   *
+   * Usage: <div className="container">...</div>
+   *
+   * For custom widths, use max-w-* utilities directly:
+   * <div className="max-w-6xl mx-auto px-4">...</div>
+   */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* 16px - mobile padding */
+    padding-right: 1rem;
+  }
 
-/* =====================
-   MAIN CONTENT
-   ===================== */
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
 
-main {
-    flex: 1;
-}
+  /* Decorative divider lines with accent */
+  .divider-line {
+    @apply h-px bg-primary/30;
+  }
 
-/* Hero Section */
-.hero {
-    background: var(--white);
-    padding: 50px 30px;
-    border-radius: 15px;
-    text-align: center;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
+  .divider-accent {
+    @apply w-2 h-2 rounded-full bg-primary mx-2;
+  }
 
-.hero h2 {
-    font-size: 2em;
-    color: var(--primary);
-    margin-bottom: 15px;
-}
+  /* Luxury card styling */
+  .luxury-card {
+    @apply bg-card rounded-lg overflow-hidden shadow-lg transition-all duration-200 hover:shadow-2xl;
+  }
 
-.hero p {
-    font-size: 1.1em;
-    color: #666;
-}
+  /* Gold text accent */
+  .text-gold {
+    @apply text-primary;
+  }
 
-/* Menu Section */
-.menu-section {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-    color: var(--white);
-    border: none;
-    padding: 16px 40px;
-    font-size: 1.1em;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
-    font-weight: 600;
-    letter-spacing: 0.5px;
-}
-
-.btn-primary:hover {
-    background: linear-gradient(135deg, var(--secondary) 0%, #6b3410 100%);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
-}
-
-.btn-primary:active {
-    transform: translateY(-1px);
-}
-
-/* Info Cards */
-.info-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.card {
-    background: var(--white);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    border-right: 4px solid var(--accent);
-    transition: all 0.3s ease;
-    text-align: center;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-}
-
-.card h3 {
-    color: var(--primary);
-    font-size: 1.3em;
-    margin-bottom: 12px;
-}
-
-.card p {
-    color: #666;
-    font-size: 0.95em;
-}
-
-/* =====================
-   FOOTER
-   ===================== */
-
-footer {
-    background: var(--primary);
-    color: var(--white);
-    text-align: center;
-    padding: 20px 0;
-    margin-top: auto;
-    border-top: 4px solid var(--accent);
-    font-size: 0.9em;
-}
-
-/* =====================
-   RESPONSIVE DESIGN
-   ===================== */
-
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8em;
+  /* Smooth fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
     }
-
-    .subtitle {
-        font-size: 0.95em;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
 
-    .hero h2 {
-        font-size: 1.5em;
-    }
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
 
-    .btn-primary {
-        padding: 14px 30px;
-        font-size: 1em;
+  /* Pulse animation for badges */
+  @keyframes pulse-soft {
+    0%, 100% {
+      opacity: 0.8;
     }
+    50% {
+      opacity: 1;
+    }
+  }
 
-    .info-cards {
-        grid-template-columns: 1fr;
-    }
+  .animate-pulse-soft {
+    animation: pulse-soft 2s ease-in-out infinite;
+  }
 
-    .card {
-        padding: 20px;
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-right: 1.5rem;
     }
-}
+  }
 
-@media (max-width: 480px) {
-    header {
-        padding: 30px 0;
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem; /* 32px - desktop padding */
+      padding-right: 2rem;
+      max-width: 1280px; /* Standard content width */
     }
-
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    .hero {
-        padding: 30px 20px;
-    }
-
-    .hero h2 {
-        font-size: 1.3em;
-    }
-
-    .btn-primary {
-        padding: 12px 25px;
-        font-size: 0.95em;
-    }
+  }
 }
